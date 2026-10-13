@@ -1,0 +1,29 @@
+<html> 
+<head> 
+<title>JSTL Format Tags Demo</title> 
+</head> 
+<body> 
+<h2>JSTL Format Tags Example</h2> 
+<!-- Number formatting --> 
+<c:set var="price" value="12345.6789" /> 
+<h3>Number Formatting</h3> 
+Original Value: <c:out value="${price}" /> 
+<br> 
+Formatted Number:  
+<fmt:formatNumber value="${price}" type="number" /> 
+<br> 
+Currency Format:  
+<fmt:formatNumber value="${price}" type="currency" /> 
+<br><br> 
+<!-- Date formatting --> 
+<c:set var="today" value="<%= new java.util.Date() %>" /> 
+<h3>Date Formatting</h3> 
+Original Date: <c:out value="${today}" /> 
+<br> 
+Formatted Date:  
+<fmt:formatDate value="${today}" pattern="dd-MM-yyyy" /> 
+<br> 
+Time Format: 
+<fmt:formatDate value="${today}" pattern="hh:mm:ss a" /> 
+</body> 
+</html>
